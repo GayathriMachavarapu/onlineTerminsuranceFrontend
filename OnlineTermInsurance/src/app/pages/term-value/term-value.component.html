@@ -1,0 +1,34 @@
+<div class="container"><mat-toolbar color="primary">
+    <h1>Online Term Insurance</h1>
+   <button mat-raised-button color="primary" [routerLink]="['/SignIn']">Back</button>
+</mat-toolbar>
+</div>
+
+
+
+
+<form (ngSubmit)="calculate()" id="form">
+    <h1>Term Value Calculation</h1>
+   
+    <p>
+        <mat-form-field appearance="outline" class="field">
+            <mat-label>Years</mat-label>
+            <input  [(ngModel)]="years" name="years"  matInput placeholder="years">
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline" class="field">
+            <mat-label>Income</mat-label>
+            <input  [(ngModel)]="income" name="income"  matInput placeholder="income">
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="outline" class="field">
+            <mat-label>Term Value</mat-label>
+            <input   value="{{result}}"  matInput placeholder="term value">
+        </mat-form-field>
+    </p>
+    <button  class="btn btn-primary mt-4" id="submit">Submit
+
+    </button>
+</form>

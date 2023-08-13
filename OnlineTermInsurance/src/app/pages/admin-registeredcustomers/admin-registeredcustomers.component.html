@@ -1,0 +1,49 @@
+
+<div class="container"><mat-toolbar color="primary">
+    <h1>Online Term Insurance</h1>
+   <button mat-raised-button color="primary" [routerLink]="['/signIn']">Back</button>
+</mat-toolbar>
+
+        <div class = "oper"  id="footer">
+        <mat-toolbar> <h1 id="font"> Customer List</h1> </mat-toolbar>
+        </div>
+        
+        <table class = "table table-striped table-bordered" >
+            <thead>
+            <tr>
+                <th>UserName</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>DOB</th>
+                <th>ContactNumber</th>
+                <th>Gender</th>
+                <th>Income</th>
+                <th>Address</th>
+                <th>Employment</th>
+               
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor ="let customerRequest of customerList">
+                <td> {{ customerRequest.userName }} </td>
+                <td> {{ customerRequest.firstName }} </td>
+                <td> {{customerRequest.lastName}} </td>
+                <td> {{customerRequest.email}} </td>
+                <td> {{customerRequest.dob}} </td>
+                <td> {{customerRequest.contactNumber}} </td>
+                <td> {{customerRequest.gender}} </td>
+                <td> {{customerRequest.income}} </td>
+                <td> {{customerRequest.address}} </td>
+                <td> {{customerRequest.employment}} </td>
+                
+
+            </tr>
+        </tbody>
+        </table>
+        </div>
+
+    
+   
+

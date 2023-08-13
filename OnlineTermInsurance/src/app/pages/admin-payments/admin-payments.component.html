@@ -1,0 +1,38 @@
+<div class="container"><mat-toolbar color="primary">
+    <h1>Online Term Insurance</h1>
+   <button mat-raised-button color="primary" [routerLink]="['/signIn']">Back</button>
+</mat-toolbar>
+
+        <div class = "oper"  id="footer">
+        <mat-toolbar> <h1 id="font"> Payment List</h1> </mat-toolbar>
+        </div>
+        
+        <table class = "table table-striped table-bordered" >
+            <thead>
+            <tr>
+                <th>PaymentId</th>
+                <th>Payment Date</th>
+                <th>Payment Status</th>
+                <th>Amount Paid</th>
+                <th>CustomerId</th>
+                <th>PolicyId</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor ="let PaymentDto of payments">
+                <td> {{PaymentDto.paymentId}} </td>
+                <td> {{PaymentDto.paymentDate}} </td>
+                <td> {{PaymentDto.paymentStatus}} </td>
+                <td> {{PaymentDto.amountPaid}} </td>
+                <td> {{PaymentDto.customerId}} </td>
+                <td> {{PaymentDto.policyId}} </td>
+
+            </tr>
+        </tbody>
+        </table>
+        </div>
+
+    
+   
+

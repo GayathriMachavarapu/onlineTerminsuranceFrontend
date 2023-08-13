@@ -1,0 +1,99 @@
+<div class="container"><mat-toolbar color="primary">
+    <h1>Online Term Insurance</h1>
+   <button mat-raised-button color="primary" [routerLink]="['/Home']">Back</button>
+</mat-toolbar>
+    <div class="card" >
+        <h1>Registration Form</h1>
+        
+
+        <form #myForm="ngForm" (ngSubmit)="formSubmit()">
+            <!-- <p> -->
+                <mat-form-field appearance="outline" class="field" >
+                    <mat-label>UserName</mat-label>
+                    <input  [(ngModel)]="customer.userName" name="userName" matInput placeholder="User Name" required>
+
+                </mat-form-field><br>
+            <!-- </p> -->
+            
+                <mat-form-field appearance="outline" class="field">
+                    <mat-label>FirstName</mat-label>
+                    <input  [(ngModel)]="customer.firstName" name="firstName" matInput placeholder="FirstName" required>
+                </mat-form-field><br>
+            
+            
+                <mat-form-field appearance="outline" class="field">
+                    <mat-label>LastName</mat-label>
+                    <input  [(ngModel)]="customer.lastName" name="lastName"  matInput placeholder="LastName" required>
+                </mat-form-field><br>
+           
+            
+                <mat-form-field appearance="outline" class="field">
+                    <mat-label>Password</mat-label>
+                    <input  [(ngModel)]="customer.password" name="password"  type="password" matInput placeholder="Enter Password" required>
+                </mat-form-field><br>
+            
+           
+                <mat-form-field appearance="outline" class="field">
+                    <mat-label>Email</mat-label>
+                    <input   [(ngModel)]="customer.email" name="email"  matInput placeholder="Enter Email" required>
+                </mat-form-field><br>
+            
+            
+                <mat-form-field appearance="outline" class="field">
+                    <mat-label>ContactNumber</mat-label>
+                    <input  [(ngModel)]="customer.contactNumber" name="contactNumber"  matInput placeholder="Enter Email" required>
+                </mat-form-field><br>
+          
+           
+                <mat-form-field appearance="outline" class="field">
+                    <mat-label>Gender</mat-label>
+                    <input  [(ngModel)]="customer.gender" name="gender"  matInput placeholder="Enter Gender" required>
+                </mat-form-field><br>
+            
+           
+                <!-- <mat-form-field appearance="outline" class="field">
+                    <mat-label>DOB</mat-label>
+                    <input   [(ngModel)]="customer.dob" name="dob"  matInput placeholder="enter Date of birth">
+                </mat-form-field><br> -->
+                <mat-form-field class="example-full-width">
+                    <mat-label>Choose a date</mat-label>
+                    <input matInput [matDatepicker]="picker">
+                    <mat-hint>YYYY/MM/DD</mat-hint>
+                    <mat-datepicker-toggle matIconSuffix [for]="picker">
+                      <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+                    </mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field><br>
+           
+            
+          
+                <mat-form-field appearance="outline" class="field">
+                    <mat-label>Address</mat-label>
+                    <input  [(ngModel)]="customer.address" name="address"  matInput placeholder="Enter AddressLine" required>
+                </mat-form-field><br>
+            
+                <mat-form-field appearance="outline" class="field">
+                    <mat-label>Income</mat-label>
+                    <input  [(ngModel)]="customer.income" name="income" matInput placeholder="Enter Income" required>
+                </mat-form-field><br>
+            
+          
+                <mat-form-field appearance="outline" class="field">
+                    <mat-label>Employment</mat-label>
+                    <input   [(ngModel)]="customer.employment" name="employment"  matInput placeholder="Enter Employment" required>
+                </mat-form-field><br>
+           
+            
+            <div class="send">
+                <button type="submit" [disabled]="myForm.invalid" mat-raised-button color="primary" >Register</button>
+                <button  type="submit" mat-raised-button color="primary" [routerLink]="['/Signin']">Signin</button>
+                <button type="reset" mat-raised-button color="accent">Reset</button>
+            </div>
+
+
+
+        </form>
+
+    </div>
+
+</div>

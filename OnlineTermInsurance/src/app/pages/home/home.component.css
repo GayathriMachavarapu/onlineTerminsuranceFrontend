@@ -1,0 +1,37 @@
+#fontSize{
+    color: rgb(13, 13, 13);
+    font-size: xx-large;
+    text-align:  center;
+}
+#scrolling{
+    direction:"right";
+    behavior: "alternate";
+    
+}
+#start{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: justify;
+    display: inline;
+}
+#start1{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    margin: 0;
+    display: inline-block;
+}
+#h1{
+    display: inline;
+
+}
+
+/* Blue */
+#info {
+    border-color: #669bd1;;
+    color: #669bd1;
+  }
+.oper{
+    margin-left: auto;
+}

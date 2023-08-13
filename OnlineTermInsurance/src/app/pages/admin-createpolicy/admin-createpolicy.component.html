@@ -1,0 +1,50 @@
+<div class="container"><mat-toolbar color="primary">
+    <h1>Online Term Insurance</h1>
+   <button mat-raised-button color="primary" [routerLink]="['/signIn']">Back</button>
+</mat-toolbar>
+
+<div class="row">
+    <div class="card col-md-6 offset-md-3 offset-md-3">
+        <div class="row"  >
+            <h3 class="text-left"> Create Policy </h3>
+            <hr />
+            <div class="card-body" >
+                <form (ngSubmit)="onSubmit()">
+
+                    <div class="form-group">
+                        <label>policyId</label>
+                        <input type="text" class="form-control" id="policyId" [(ngModel)]="policy.policyId" name="policyId">
+                    </div>
+
+
+
+<div class="form-group" >
+    <label>policyName</label>
+    <input type="text" class="form-control" id="policyName" [(ngModel)]="policy.policyName" name="policyName">
+</div>
+
+<div class="form-group">
+    <label>totalAmount</label>
+    <input type="number" class="form-control" id="totalAmount" [(ngModel)]="policy.totalAmount" name="totalAmount">
+</div>
+
+<div class="form-group">
+    <label>termAmount</label>
+    <input type="number" class="form-control" id="termAmount" [(ngModel)]="policy.termAmount" name="termAmount">
+  
+</div>
+
+<div class="form-group">
+    <label>claimingAmount</label>
+    <input type="text" class="form-control" id="claimingAmount" [(ngModel)]="policy.claimingAmount" name="claimingAmount">
+</div>
+<br />
+<button class="btn btn-success" type="submit">Submit</button>
+
+</form>
+</div>
+</div>
+</div>
+</div>
+
+

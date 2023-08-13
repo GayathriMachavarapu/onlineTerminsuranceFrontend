@@ -1,0 +1,39 @@
+<div class="container"><mat-toolbar color="primary">
+    <h1>Online Term Insurance</h1>
+   <button mat-raised-button color="primary" [routerLink]="['/SignIn']">Back</button>
+</mat-toolbar>
+
+        <div class = "oper"  id="footer">
+        <mat-toolbar> <h1 id="font"> Policy List</h1> </mat-toolbar>
+        </div>
+        
+        <table class = "table table-striped table-bordered" >
+            <thead>
+            <tr>
+                <th>Policy Id</th>
+                <th>Policy Name</th>
+                <th>Total Amount</th>
+                <th>Term Amount</th>
+                <th>Claiming Amount</th>
+                <th>Customer Id</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <!-- <tr *ngFor ="let customerResponse of customers">
+                <tr *ngFor="let PolicyDto of customerResponse.policies">
+                <td> {{PolicyDto.policyId}} </td>
+                <td> {{PolicyDto.policyName}} </td>
+                <td> {{PolicyDto.totalAmount}} </td>
+                <td> {{PolicyDto.termAmount}} </td>
+                <td> {{PolicyDto.claimingAmount}} </td>
+                <td> {{PolicyDto.customerId}} </td>
+               
+
+            </tr> -->
+        </tbody>
+        </table>
+        </div>
+
+    
+   

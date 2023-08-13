@@ -1,0 +1,19 @@
+
+.container{
+    width: 100%;
+    text-align: center;
+}
+
+.container button{
+   margin-left: auto;
+}
+.container.card{
+    background-color: aliceblue;
+    width: 50%;
+    margin: auto;
+    margin-top: 10px;
+
+}
+.send button{
+    margin: 10px;
+}

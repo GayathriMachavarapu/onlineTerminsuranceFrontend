@@ -1,0 +1,35 @@
+<div class="container"><mat-toolbar color="primary">
+    <h1>Online Term Insurance</h1>
+   <button mat-raised-button color="primary" [routerLink]="['/Home']">Back</button>
+</mat-toolbar>
+    <div class="card">
+        <h1>SignIn</h1>
+        <form #myForm="ngForm" (ngSubmit)="doSignIn(myForm.value)">
+            
+            <mat-form-field appearance="outline" class="field">
+                <mat-label>UserName</mat-label>
+                <input type="text" [(ngModel)]="data.userName"  name="userName" matInput placeholder="User Name" required>
+
+            </mat-form-field><br>
+        <!-- </p> -->
+        <!-- <p> -->
+            <mat-form-field appearance="outline" class="field">
+                <mat-label>Password</mat-label>
+                <input type="text"  [(ngModel)]="data.password" name="password" matInput placeholder="Enter Password" required>
+            </mat-form-field>
+            
+            
+            <div class="send">
+                <button type="submit" mat-raised-button color="primary" [disabled]="myForm.invalid"  [routerLink]="['/signIn']">signIn</button>
+                <button type="reset" mat-raised-button color="accent">Reset</button>
+            </div>
+
+
+
+        </form>
+
+    </div>
+
+</div>
+
+

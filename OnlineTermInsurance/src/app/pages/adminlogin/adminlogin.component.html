@@ -20,7 +20,7 @@
             
             
             <div class="send">
-                <button type="submit" mat-raised-button color="primary" [disabled]="myForm.invalid"  [routerLink]="['/signIn']">signIn</button>
+                <button type="submit" (click)="getUserbyUsername(data.userName)" mat-raised-button color="primary" [disabled]="myForm.invalid"  routerLink="signIn">signIn</button>
                 <button type="reset" mat-raised-button color="accent">Reset</button>
             </div>
 

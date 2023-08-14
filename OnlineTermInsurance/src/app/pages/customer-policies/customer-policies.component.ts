@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { PolicyResponse } from 'src/app/classes';
+import { Component, OnInit, numberAttribute } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { PolicyDto, PolicyResponse } from 'src/app/classes';
 import { PolicyService } from 'src/app/services/policy.service';
 
 @Component({
@@ -9,12 +10,24 @@ import { PolicyService } from 'src/app/services/policy.service';
 })
 export class CustomerPoliciesComponent implements OnInit {
   policies:PolicyResponse[]=[];
+
+  policyId!: number;
   
-  constructor(private policyService:PolicyService) {
+  policy:PolicyResponse=new PolicyResponse();
+  
+  constructor(private policyService:PolicyService,private router: Router,private route: ActivatedRoute) {
     
   }
 ngOnInit():void{
   this.getpolicies();
+  this.policyId = this.route.snapshot.params['policyId'];
+  this.policyService.findById(this.policyId).subscribe(data => {
+
+    this.policy = data;
+
+  }, error => console.log(error));
+
+  
   
   
 }
@@ -32,5 +45,39 @@ save(policy:PolicyResponse){
       this.getpolicies();
     })
 }
+
+getPolicyById(policyId:number){
+  this.policyService.findById(policyId).subscribe(data=>{
+    this.policy=data;
+  })
+
+}
+
+onSubmit(){
+
+  this.policyService.addPoliciesTocustomer(this.policy).subscribe( data =>{
+
+    this.goToPolicyList();
+    
+
+  },
+
+ error => console.log(error));
+
+}
+
+
+
+goToPolicyList(){
+
+
+  this.router.navigate(['/MyPolicies']);
+  console.log(this.policy);
+  
+
+}
+
+
+
 
 }

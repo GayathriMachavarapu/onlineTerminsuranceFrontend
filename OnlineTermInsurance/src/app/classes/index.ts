@@ -1,3 +1,5 @@
+import { DateFilterFn } from "@angular/material/datepicker";
+
 export class AdminDto{
     adminId!:number;
     email!:string;
@@ -71,4 +73,11 @@ export class customerRequest{
 export class userResponse{
     userName!: string;
     password!:string
+}
+export class adminResponse{
+    userName!: string;
+    password!:string
+    
+
+    
 }

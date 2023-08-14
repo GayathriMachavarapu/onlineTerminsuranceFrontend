@@ -26,10 +26,9 @@
                 <td> {{PolicyResponse.termAmount}} </td>
                 <td> {{PolicyResponse.claimingAmount}} </td>
                 <td>
-                    <button  class = "btn btn-primary"  [routerLink]="['/MyPolicies']" > Buy</button>
+                    <button (click)="onSubmit()" class = "btn btn-primary"   > Buy</button>
                    
                 </td>
-
             </tr>
         </tbody>
         </table>

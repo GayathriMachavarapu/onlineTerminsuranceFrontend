@@ -35,39 +35,68 @@ export class CustomerLoginComponent implements OnInit{
     if(this.user_records.some((v)=>{
       return v.password==this.data.password
     })){
-      alert("Duplicate Data");
+     // alert("Duplicate Data");
 
     }
 
     else{
       this.user_records.push(this.data);
       localStorage.setItem('users',JSON.stringify(this.user_records));
-      alert("Hi "+this.data.userName+"You Are Succesfully registered");
+      alert("UserName not Registered");
     }
+    
+  
+  
+      
     
   }
   
  
- getUserbyusername(userName:string){
+ getUserbyUsername(userName:string){
   this.userService.getUserByUsername(userName).subscribe(data=>{
     this.userR=data;
-    if(data.userName===this.userR.userName && data.password===this.userR.password){
+    if (data.userName==this.userR.userName ) {
+      if(data.password===this.userR.password){
+      alert("succussfully login");
      console.log("matched");
-      // sign();
-
-
+     this.sign();
+      }
+     
+     
+    }
+    else{
+      alert("userName or password is inavlid");
+      console.log("notmatched");
     }
 
+    
+    
+    
+
   });
+  
+  
+  
 
 
  } 
+ sign(){
+  this.router.navigate(['/SignIn']);
+
+ }
+ 
+ 
+
+ 
+ 
   
  
 }
 
 
-// function sign(this: any) {
-//   this.router.navigate(['/SignIn']);
-// }
+
+
+
+
+
 

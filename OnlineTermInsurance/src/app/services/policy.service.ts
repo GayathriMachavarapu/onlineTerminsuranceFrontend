@@ -33,5 +33,10 @@ export class PolicyService {
     return this.httpClient.delete(`${this.baseUrl}/deletepolicy/${policyId}`);
   }
 
+  addPoliciesTocustomer(policy:PolicyResponse){
+    return this.httpClient.post<PolicyResponse>(`${this.baseUrl}/addPoliciesToCustomer`,policy);
+    
+  }
+
   
 }

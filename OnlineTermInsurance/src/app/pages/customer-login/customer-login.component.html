@@ -19,7 +19,7 @@
                 </mat-form-field>
             <!-- </p> -->
             <div class="send">
-                <button  mat-raised-button color="primary" [disabled]="myForm.invalid" >SignIn</button>
+                <button   (click)="getUserbyUsername(data.userName)" mat-raised-button color="primary" [disabled]="myForm.invalid" routerLink="SignIn">SignIn</button>
                 <button type="reset" mat-raised-button color="accent">Reset</button>
             </div>
 

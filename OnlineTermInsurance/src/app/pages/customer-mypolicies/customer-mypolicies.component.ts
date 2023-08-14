@@ -10,26 +10,25 @@ import { PolicyService } from 'src/app/services/policy.service';
 })
 export class CustomerMypoliciesComponent implements OnInit {
   customers:customerResponse[]=[];
-  policies:PolicyDto =new PolicyDto();
-  constructor(private customerService:CustomerService)
+  policy:PolicyResponse =new PolicyResponse();
+  constructor(private policyService:PolicyService)
   {
     
   }
   ngOnInit():void{
-    this.get();
+  
     
   }
-  get()
-  {
-    this.customerService.getPoliciesList(this.policies.customerId).subscribe(data=>
-      {
-        this.customers=data;
-      })
+  
   }
+
+
+  
+  
  
   
 
 
 
 
-}
+
